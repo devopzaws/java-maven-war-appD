@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label 'Master'
+        label 'velakaran'
     }
 
     tools {
@@ -10,7 +10,7 @@ pipeline{
     stages{
         stage('SCM Checkout'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/DevOps-SVC04/java-maven-war-app.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/pikaz01/java-maven-war-appD.git']])
             }
 
         }
@@ -33,16 +33,13 @@ pipeline{
         //     }
         // }
 
-        stage('Nexus Upload'){
-            steps{
-                sh 'mvn -s settings.xml clean deploy'
-            }
-        }
+        // stage('Nexus Upload'){
+        //     steps{
+        //         sh 'mvn -s settings.xml clean deploy'
+        //     }
+        // }
 
         stage('deployment'){
-            agent{
-                label 'Ansible'
-            }
             steps{
                 sh 'ansible-playbook -i inventory deployment_playbook.yml -e "build_number=${BUILD_NUMBER}"'
             }
