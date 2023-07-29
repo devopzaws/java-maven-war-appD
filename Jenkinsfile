@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label 'velakaran'
+        label 'Master'
     }
 
     tools {
