@@ -39,11 +39,11 @@ pipeline{
         //     }
         // }
 
-        stage('deployment'){
-            steps{
-                sh 'ansible-playbook -i inventory deployment_playbook.yml -e "build_number=${BUILD_NUMBER}"'
-            }
-        }
+        // stage('deployment'){
+        //     steps{
+        //         sh 'ansible-playbook -i inventory deployment_playbook.yml -e "build_number=${BUILD_NUMBER}"'
+        //     }
+        // }
 
     }
 }
