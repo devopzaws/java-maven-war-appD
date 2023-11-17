@@ -6,7 +6,7 @@
 <body>
 	<h1>Hello Class!</h1>
 	<h1>DevOps Training - Sep 2023 Batch</h1>
-	<h1>This is automated deployment enabled using webhook</h1>	
+	<h1>This is automated deployment enabled using webhook to jenkins job</h1>	
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>
