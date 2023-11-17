@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>Hello World!</h1>
-	<h1>DevOps Training - Apr 2023 Batch</h1>
+	<h1>DevOps Training - Sep 2023 Batch</h1>
 	<h1>This is automated deployment 2</h1>
 	<h1>webhook trigger</h1>
 	<p>
