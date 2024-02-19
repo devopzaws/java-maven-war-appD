@@ -3,7 +3,7 @@
   hosts: all
   become: true
   vars:
-    nexus_url: ec2-13-210-72-40.ap-southeast-2.compute.amazonaws.com:8081/repository
+    nexus_url: ec2-54-252-238-203.ap-southeast-2.compute.amazonaws.com:8081/repository
     repository_type: java-maven-war-appD-release
     group_id: com%2Fmycompany%2Fapp
     artifact_id: hello-world-war
@@ -15,7 +15,7 @@
       url: "{{nexus_url}}/{{repository_type}}/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war"
       dest: /home/ec2-user
       username: admin
-      password: Meera@199
+      password: admin
 
   - name: Rename war file
     ansible.builtin.shell: mv /home/ec2-user/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war /home/ec2-user/faangler.war
